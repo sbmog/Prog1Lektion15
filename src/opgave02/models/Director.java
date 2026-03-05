@@ -10,4 +10,15 @@ public class Director {
         this.name = name;
         this.birthday = birthday;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String toString() {
+        return "Director{" +
+                "name='" + name + '\'' +
+                ", birthday=" + birthday +
+                '}';
+    }
 }

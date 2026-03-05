@@ -9,7 +9,18 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
         Storage storage = initStorage();
+
+        storage.printAcotrList();
+
+        storage.directorsMovies();
+
+
+    }
+
+    public void directorsMovies(Director director){
+
     }
 
     private static Storage initStorage() {

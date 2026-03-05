@@ -2,21 +2,32 @@ package opgave02.models;
 
 import java.util.ArrayList;
 
-public class Movie {
-    private String title;
+public class Movie extends MotionPicture {
     private int productionYear;
     private Director director;
-    private Genre[] genres;
     private double rating;
-    private ArrayList<Actor> cast;
 
     public Movie(String title, int productionYear, Director director, Genre[] genres,
                  double rating, ArrayList<Actor> cast) {
-        this.title = title;
+        super(title, genres, cast);
         this.productionYear = productionYear;
         this.director = director;
-        this.genres = genres;
         this.rating = rating;
-        this.cast = cast;
+    }
+
+    public Director getDirector() {
+        return director;
+    }
+
+    public String getTitle() {
+        return super.getTitle();
+    }
+
+    public String toString() {
+        return "Movie{" +
+                "productionYear=" + productionYear +
+                ", director=" + director +
+                ", rating=" + rating +
+                '}';
     }
 }
